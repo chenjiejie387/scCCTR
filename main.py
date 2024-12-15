@@ -213,7 +213,6 @@ def Iterative_selecting(
                         consensus_matrix[i, j] += 1
 
         consensus_matrix /= len(all_clusterings)
-        distance_matrix = 1 - consensus_matrix
 
         # Hierarchical clustering
         clustering = AgglomerativeClustering(n_clusters=num_clusters, affinity='precomputed', linkage='average')
